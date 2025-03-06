@@ -5,8 +5,7 @@ const countdown = document.getElementById('counter');
 let buttonSta = false;
 let interval = null; 
 const breakSound = new Audio("https://www.soundjay.com/buttons/sounds/button-16a.mp3");
-   
-
+const  ring =new Audio("https://www.soundjay.com/misc/sounds/bell-ringing-01c.mp3")
 function goToPomodoro(){
     start = 25;
     document.getElementById('counter').innerHTML='25:00';
@@ -36,7 +35,7 @@ function changeBtnSta() {
         buttonSta = true;
         clearInterval(interval); 
         interval = setInterval(updateCountDown, 1000);
-        document.getElementById('btn4').innerHTML="bouse"
+        document.getElementById('btn4').innerHTML="Pouse"
     }
     else{
 
@@ -59,6 +58,7 @@ function updateCountDown() {
 
     if (time < 0) {
         clearInterval(interval);
+        ring.play()
     }
 }
 document.getElementById("btn1").addEventListener("click", function() {
