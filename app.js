@@ -3,25 +3,32 @@ let start = 25;
 let time = start * 60;
 const countdown = document.getElementById('counter');
 let buttonSta = false;
-let interval = null; 
+let interval = null;
+
 const breakSound = new Audio("https://www.soundjay.com/buttons/sounds/button-16a.mp3");
 const  ring =new Audio("https://www.soundjay.com/misc/sounds/bell-ringing-01c.mp3")
+
+
 function goToPomodoro(){
     start = 25;
     document.getElementById('counter').innerHTML='25:00';
       time=start*60;
       buttonSta =false;
       clearInterval(interval);  
-      document.getElementById('btn').innerHTML="Start Count"
-}
+      document.getElementById('btn4').innerHTML="Start Count"
+       
+      document.body.style.backgroundColor = "#fff ";
+    }
 function goToShort(){
     start = 5;
     document.getElementById('counter').innerHTML='5:00';
     time=start*60;
     buttonSta =false;
-    clearInterval(interval);  
-    document.getElementById('btn').innerHTML="Start Count"
+    clearInterval(interval);
+
+    document.getElementById('btn4').innerHTML="Start Count"
 }
+
 function goToLong(){
     start = 15;
     document.getElementById('counter').innerHTML='15:00';
@@ -30,6 +37,7 @@ function goToLong(){
     clearInterval(interval);  
     document.getElementById('btn4').innerHTML="Start Count"
 }
+
 function changeBtnSta() {
     if (!buttonSta) {
         buttonSta = true;
