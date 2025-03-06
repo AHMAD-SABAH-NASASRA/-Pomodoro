@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pomodoro</title>
+</head>
+<body>
+
+ <div class="maincontainer">
+
+    <div class="upper">
+        <button id="btn1" type="button" class="btn  " onclick="goToPomodoro()"> Pomodoro </button>
+        <button id="btn2" type="button" class="btn  " onclick="goToShort()"> short Breack </button>
+        <button id="btn3" type="button" class="btn  " onclick="goToLong()"> long Breack </button>
+    </div>
+  
+    <div class="countercontainer"> <p id="counter">25:00</p> </div>
+
+  
+    <div class="down">
+      <button id="btn4" type="button" class="btn btn-primary btn-lg" onclick="changeBtnSta()"> Start Count </button>
+      
+    </div>
+
+
+ </div>
+
+ <script src="app.js"></script>
+
+</body>
+</html>
